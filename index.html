@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr"><head><meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tableau de bord — KurdiLex Collecte</title>
+<style>
+:root{--fond:#f7f7f4;--carte:#fff;--texte:#1f2328;--doux:#6b7280;--bord:#e5e7eb;--a:#3b6fd4;--p:#2e9e5b;--v:#e0a21b;--r:#c0392b}
+@media (prefers-color-scheme:dark){:root{--fond:#111318;--carte:#181b21;--texte:#e5e7eb;--doux:#9ca3af;--bord:#2d323b}}
+body{font-family:system-ui,sans-serif;background:var(--fond);color:var(--texte);margin:0}
+main{max-width:1050px;margin:0 auto;padding:16px}
+h1{font-size:24px;margin:8px 0 4px} h2{font-size:17px;margin:2px 0 12px}
+.doux{color:var(--doux);font-size:13px}
+.chiffres{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:16px 0}
+.chiffre,.carte{background:var(--carte);border:1px solid var(--bord);border-radius:8px;padding:12px 16px}
+.chiffre b{display:block;font-size:26px;font-variant-numeric:tabular-nums}
+.carte{margin-bottom:16px} .carte.alerte{border-left:4px solid var(--r)}
+.deux{display:grid;grid-template-columns:1fr 1fr;gap:16px} @media(max-width:760px){.deux{grid-template-columns:1fr}}
+.barres{display:grid;grid-template-columns:minmax(90px,200px) 1fr auto;gap:6px 10px;align-items:center;font-size:13px}
+.lib{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .val{font-variant-numeric:tabular-nums}
+.piste{background:var(--bord);border-radius:4px;height:16px;overflow:hidden} .piste span{display:block;height:100%;border-radius:4px}
+.histo{display:flex;align-items:flex-end;gap:2px;height:160px;border-bottom:1px solid var(--bord)}
+.col{flex:1;display:flex;flex-direction:column-reverse;height:100%;min-width:3px}
+.col .p{background:var(--p)} .col .v{background:var(--v)}
+.axe{display:flex;justify-content:space-between;font-size:12px;color:var(--doux);margin-top:4px}
+.leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin:0 4px 0 12px;vertical-align:middle}
+table{border-collapse:collapse;width:100%;font-size:13px} th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--bord)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums} td.alerte{color:var(--r)}
+.table{overflow-x:auto}
+</style></head><body><main>
+<h1>Tableau de bord de la collecte</h1>
+<p class="doux">Mis à jour le 2026-11-22 19:00 · 5 jour(s) de collecte affiché(s) ·
+les textes ne sont ajoutés à KurdiLex qu'après votre validation.</p>
+
+<div class="chiffres">
+  <div class="chiffre"><b>146</b><span class="doux">textes prêts</span></div>
+  <div class="chiffre"><b>40 680</b><span class="doux">mots prêts</span></div>
+  <div class="chiffre"><b>24</b><span class="doux">textes à vérifier</span></div>
+  <div class="chiffre"><b>86 %</b><span class="doux">des textes passent le contrôle</span></div>
+  <div class="chiffre"><b>7</b><span class="doux">sources suivies</span></div>
+</div>
+
+<section class='carte alerte'><h2>À regarder (dernière collecte)</h2><ul><li><b>rudaw-nuce</b> : non collectée : collecte non autorisée dans le registre (non)</li><li><b>rudaw-cand</b> : non collectée : collecte non autorisée dans le registre (non)</li><li><b>peyamakurd</b> : non collectée : collecte non autorisée dans le registre (non)</li><li><b>rojnews</b> : non collectée : collecte non autorisée dans le registre (non)</li><li><b>botantimes</b> : non collectée : collecte non autorisée dans le registre (non)</li><li><b>rojava-weje</b> : non collectée : collecte non autorisée dans le registre (non)</li></ul></section>
+
+<section class="carte">
+  <h2>Mots collectés par jour</h2>
+  <div class='histo'><div class='col' title='2026-11-04 : 1 177 mots prêts, 0 mots à vérifier'><span class='v' style='height:0.0%'></span><span class='p' style='height:6.6%'></span></div><div class='col' title='2026-11-06 : 4 782 mots prêts, 0 mots à vérifier'><span class='v' style='height:0.0%'></span><span class='p' style='height:27.0%'></span></div><div class='col' title='2026-11-08 : 7 053 mots prêts, 60 mots à vérifier'><span class='v' style='height:0.3%'></span><span class='p' style='height:39.8%'></span></div><div class='col' title='2026-11-21 : 16 893 mots prêts, 816 mots à vérifier'><span class='v' style='height:4.6%'></span><span class='p' style='height:95.4%'></span></div><div class='col' title='2026-11-22 : 10 775 mots prêts, 194 mots à vérifier'><span class='v' style='height:1.1%'></span><span class='p' style='height:60.8%'></span></div></div><div class='axe'><span>2026-11-04</span><span>2026-11-22</span></div>
+  <p class="leg doux"><i style="background:var(--p)"></i>prêts<i style="background:var(--v)"></i>à vérifier
+  · survolez une colonne pour le détail</p>
+</section>
+
+<div class="deux">
+<section class="carte"><h2>Mots prêts par genre</h2>
+  <div class='barres'><span class='lib' title='rojname : 34 721 mots'>rojname</span><span class='piste'><span style='width:100.0%;background:var(--p)'></span></span><span class='val'>34 721</span><span class='lib' title='cand : 5 959 mots'>cand</span><span class='piste'><span style='width:17.2%;background:var(--p)'></span></span><span class='val'>5 959</span></div>
+</section>
+<section class="carte"><h2>Pourquoi des textes sont mis de côté</h2>
+  <div class='barres'><span class='lib' title='trop court'>trop court</span><span class='piste'><span style='width:100.0%;background:var(--v)'></span></span><span class='val'>21</span><span class='lib' title='lettres turques'>lettres turques</span><span class='piste'><span style='width:14.3%;background:var(--v)'></span></span><span class='val'>3</span><span class='lib' title='peu de mots-outils kurmanji'>peu de mots-outils kurmanji</span><span class='piste'><span style='width:4.8%;background:var(--v)'></span></span><span class='val'>1</span></div>
+</section>
+</div>
+
+<section class="carte"><h2>Par source</h2><div class="table">
+<table><tr><th>Source</th><th>Genre</th><th class="n">Prêts</th><th class="n">À vérifier</th><th class="n">Mots prêts</th>
+<th class="n">Pages exclues</th><th class="n">Refus</th><th>Dernière collecte</th></tr><tr><td>dengeamerika</td><td>rojname</td><td class='n'>131</td><td class='n'>24</td><td class='n'>34 721</td><td class='n'>0</td><td class='n'>0</td><td class=''>2026-11-22 : terminée</td></tr><tr><td>rudaw-cand</td><td>cand</td><td class='n'>15</td><td class='n'>0</td><td class='n'>5 959</td><td class='n'>0</td><td class='n'>0</td><td class='alerte'>2026-11-22 : non collectée : collecte non autorisée dans le registre (non)</td></tr><tr><td>botantimes</td><td></td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='alerte'>2026-11-22 : non collectée : collecte non autorisée dans le registre (non)</td></tr><tr><td>peyamakurd</td><td></td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='alerte'>2026-11-22 : non collectée : collecte non autorisée dans le registre (non)</td></tr><tr><td>rojava-weje</td><td></td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='alerte'>2026-11-22 : non collectée : collecte non autorisée dans le registre (non)</td></tr><tr><td>rojnews</td><td></td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='alerte'>2026-11-22 : non collectée : collecte non autorisée dans le registre (non)</td></tr><tr><td>rudaw-nuce</td><td></td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='alerte'>2026-11-22 : non collectée : collecte non autorisée dans le registre (non)</td></tr></table></div>
+<p class="doux">« Pages exclues » : interdites par robots.txt ou marquées noindex/noai. « Refus » : nuits où le site a répondu 401, 403, 429 ou 503.</p>
+</section>
+</main></body></html>
